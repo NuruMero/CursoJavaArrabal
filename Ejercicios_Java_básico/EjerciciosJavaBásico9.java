@@ -2,7 +2,7 @@ package Ejercicios_Java_básico;
 
 import java.util.Scanner;
 
-public class EjercicioJavaBásico9 {
+public class EjerciciosJavaBásico9 {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
         System.out.print("Ejercicio 9 - Introduce V o F: ");

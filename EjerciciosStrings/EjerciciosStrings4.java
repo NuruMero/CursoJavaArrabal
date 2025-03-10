@@ -1,8 +1,8 @@
-package EjerciciosStringsYArrays;
+package EjerciciosStrings;
 
 import java.util.Scanner;
 
-public class EjerciciosStringsYArrays4 {
+public class EjerciciosStrings4 {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
         System.out.print("Ejercicio 4 - Introduce una palabra/frase: ");

@@ -1,0 +1,231 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosArrays1",
+            "request": "launch",
+            "mainClass": "EjerciciosArrays.EjerciciosArrays1",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosArrays2",
+            "request": "launch",
+            "mainClass": "EjerciciosArrays.EjerciciosArrays2",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosArrays3",
+            "request": "launch",
+            "mainClass": "EjerciciosArrays.EjerciciosArrays3",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosArrays4",
+            "request": "launch",
+            "mainClass": "EjerciciosArrays.EjerciciosArrays4",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosArrays5",
+            "request": "launch",
+            "mainClass": "EjerciciosArrays.EjerciciosArrays5",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "EjerciciosClases.EjercicioClases5.Main",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "EjerciciosClases.EjerciciosClases1.Main",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "Main(2)",
+            "request": "launch",
+            "mainClass": "EjerciciosClases.EjerciciosClases2.Main",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "Main(3)",
+            "request": "launch",
+            "mainClass": "EjerciciosClases.EjerciciosClases3.Main",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "Main(4)",
+            "request": "launch",
+            "mainClass": "EjerciciosClases.EjerciciosClases4.Main",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosFunciones1",
+            "request": "launch",
+            "mainClass": "EjerciciosFunciones.EjerciciosFunciones1",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosFunciones2",
+            "request": "launch",
+            "mainClass": "EjerciciosFunciones.EjerciciosFunciones2",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosFunciones3",
+            "request": "launch",
+            "mainClass": "EjerciciosFunciones.EjerciciosFunciones3",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosFunciones4",
+            "request": "launch",
+            "mainClass": "EjerciciosFunciones.EjerciciosFunciones4",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "Main(5)",
+            "request": "launch",
+            "mainClass": "EjerciciosFunciones.utilidades.Main",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosStrings1",
+            "request": "launch",
+            "mainClass": "EjerciciosStrings.EjerciciosStrings1",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosStrings2",
+            "request": "launch",
+            "mainClass": "EjerciciosStrings.EjerciciosStrings2",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosStrings3",
+            "request": "launch",
+            "mainClass": "EjerciciosStrings.EjerciciosStrings3",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosStrings4",
+            "request": "launch",
+            "mainClass": "EjerciciosStrings.EjerciciosStrings4",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosStrings5",
+            "request": "launch",
+            "mainClass": "EjerciciosStrings.EjerciciosStrings5",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosJavaBásico1",
+            "request": "launch",
+            "mainClass": "Ejercicios_Java_básico.EjerciciosJavaBásico1",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosJavaBásico2",
+            "request": "launch",
+            "mainClass": "Ejercicios_Java_básico.EjerciciosJavaBásico2",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosJavaBásico3",
+            "request": "launch",
+            "mainClass": "Ejercicios_Java_básico.EjerciciosJavaBásico3",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosJavaBásico4",
+            "request": "launch",
+            "mainClass": "Ejercicios_Java_básico.EjerciciosJavaBásico4",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosJavaBásico5",
+            "request": "launch",
+            "mainClass": "Ejercicios_Java_básico.EjerciciosJavaBásico5",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosJavaBásico6",
+            "request": "launch",
+            "mainClass": "Ejercicios_Java_básico.EjerciciosJavaBásico6",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosJavaBásico7",
+            "request": "launch",
+            "mainClass": "Ejercicios_Java_básico.EjerciciosJavaBásico7",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosJavaBásico8",
+            "request": "launch",
+            "mainClass": "Ejercicios_Java_básico.EjerciciosJavaBásico8",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosJavaBásico9",
+            "request": "launch",
+            "mainClass": "Ejercicios_Java_básico.EjerciciosJavaBásico9",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "ConexionMySQL",
+            "request": "launch",
+            "mainClass": "JDBC.ConexionMySQL",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "HolaMundo",
+            "request": "launch",
+            "mainClass": "practica1.HolaMundo",
+            "projectName": "ContenidosCurso_92527b1e"
+        }
+    ]
+}

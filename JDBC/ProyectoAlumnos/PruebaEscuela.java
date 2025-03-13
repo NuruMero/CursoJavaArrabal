@@ -1,4 +1,4 @@
-package JDBC;
+package JDBC.ProyectoAlumnos;
 
 import java.sql.Statement;
 import java.util.Scanner;
@@ -7,40 +7,37 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class PruebaMySQL {
-    // java -cp ".;mysql-connector-j-9.2.0.jar" PruebaMySQL.java
-    public static Connection conn;
-    public static Scanner sc = new Scanner(System.in);
-        
+public class PruebaEscuela {
+    // java -cp ".;mysql-connector-j-9.2.0.jar" PruebaEscuela.java
+    private static Connection conn;
+    private static final Scanner sc = new Scanner(System.in);
+    
     public static void main(String[] args) {
         // Obtener la conexión utilizando el método getConexion() de ConexionMySQL
-        conn = ConexionMySQL.getConexion();
+        conn = ConexionEscuela.getConexion();
         int option = 0;
 
         if (conn != null) {
             try {
                 // Hacer algo con la conexión (por ejemplo, una consulta)
-                Statement stmt = conn.createStatement();
-                String sql = "SELECT * FROM pruebas";
-                stmt.executeQuery(sql);
+                System.out.println("""
+                        MANEJO DE BASE DE DATOS DE ALUMNOS
+                        =====O0O========()========O0O=====""");
+                read();
 
                 // Aquí iría la lógica para trabajar con la base de datos
                 while (option != 5) {
-                    System.out.print("""
-        
-                            MANEJO DE BASE DE DATOS
+                    System.out.println("""
+                            
+                            ///// MENU PRINCIPAL /////
                             1.- Consultar datos (READ)
                             2.- Insertar datos (CREATE)
                             3.- Actualizar datos (UPDATE)
                             4.- Eliminar datos (DELETE)
-                            5.- Salir
-                            Elige una opción: """);
-                    try {
-                        option = Integer.parseInt(sc.nextLine());
-                    } catch (Exception e) {
-                        System.out.println("Carácter incorrecto. Por favor pruebe otra vez.");
-                    }
-        
+                            5.- Salir""");
+                    
+                    option = scanInteger("Elige una opción");
+
                     switch (option) {
                         case 1:
                             read();
@@ -59,37 +56,62 @@ public class PruebaMySQL {
                             break;
                         default:
                             System.out.println("Objeto fuera de rango. Prueba otra vez.");
+                            option = 1;
                             break;
                     }
                 }
-            } catch (SQLException e) {
-                System.out.println("Error al interactuar con la base de datos: " +e.getMessage());
-            }
-        }
 
-        try {
-            if (conn != null) {
                 conn.close(); // Cerrar la conexión cuando ya no sea necesaria
+            } catch (Exception e) {
+                System.out.println("Error al interactuar con la base de datos: " +e.getMessage());
+                option = 1;
             }
-        } catch (SQLException e) {
-            System.out.println("Error al cerrar la conexión: " +e.getMessage());
         }
+    }
+
+    public static String scanString(String message) {
+        boolean correctDataType = false;
+        while (!correctDataType) {
+            try {
+                System.out.print(message +": ");
+                String response = sc.nextLine();
+                correctDataType = true;
+                return response;
+            } catch (Exception e) {
+                System.out.println("Dato de tipo incorrecto. Necesita ser una cadena.");
+            }
+        }
+        return null;
+    }
+
+    public static int scanInteger(String message) {
+        boolean correctDataType = false;
+        while (!correctDataType) {
+            try {
+                System.out.print(message +": ");
+                int response = Integer.parseInt(sc.nextLine());
+                correctDataType = true;
+                return response;
+            } catch (Exception e) {
+                System.out.println("Dato de tipo incorrecto. Necesita ser un número entero.");
+            }
+        }
+        return 0;
     }
     
     public static void read() {
         try {
-            String sql = "SELECT * FROM pruebas"; // Consulta SQL
+            String sql = "SELECT * FROM alumnos"; // Consulta SQL
             Statement stmt = conn.createStatement(); // Crear un Statement para ejecutar la consulta
             ResultSet rs = stmt.executeQuery(sql); // Ejecutar la consulta
 
             while (rs.next()) { // Iterar sobre los resultados
                 int id = rs.getInt("id");
                 String nombre = rs.getString("nombre");
-                String apellidos = rs.getString("apellidos");
-                int dinero = rs.getInt("dinero");
+                int edad = rs.getInt("edad");
 
                 // Imprimir los resultados
-                System.out.println("ID: " +id +", Nombre: " +nombre +", Apellidos: " +apellidos +", Dinero: " +dinero);
+                System.out.println("ID: " +id +", Nombre: " +nombre +", Edad: " +edad);
             }
         } catch(Exception e) {
             System.out.println("Error de base de datos: " +e.getMessage());
@@ -99,18 +121,13 @@ public class PruebaMySQL {
     public static void create() {
         try {
             // Insertar un nuevo registro
-            String sql = "INSERT INTO pruebas (nombre, apellidos, dinero) VALUES (?, ?, ?)"; // Consulta SQL con parámetros
+            String sql = "INSERT INTO alumnos (nombre, edad) VALUES (?, ?)"; // Consulta SQL con parámetros
             PreparedStatement pstmt = conn.prepareStatement(sql); // Preparar la sentencia
 
             // Asignar valores a los parámetros
-            System.out.print("Nombre: ");
-            pstmt.setString(1, sc.nextLine());
+            pstmt.setString(1, scanString("Nombre"));
 
-            System.out.print("Apellido: ");
-            pstmt.setString(2, sc.nextLine());
-
-            System.out.print("Dinero: ");
-            pstmt.setInt(3, Integer.parseInt(sc.nextLine()));
+            pstmt.setInt(2, scanInteger("Edad"));
 
             int filasAfectadas = pstmt.executeUpdate(); // Ejecutar la inserción
             System.out.println("Filas insertadas: " +filasAfectadas);
@@ -122,21 +139,20 @@ public class PruebaMySQL {
     public static void update() {
         try {
             // Actualizar un registro
-            String sql = "UPDATE pruebas SET dinero = ? WHERE id = ?"; // Consulta SQL con parámetros
+            String sql = "UPDATE alumnos SET edad = ? WHERE id = ?"; // Consulta SQL con parámetros
             PreparedStatement pstmt = conn.prepareStatement(sql); // Preparar la sentencia
 
             // Tomar los datos
-            System.out.print("ID del usuario a modificar: ");
-            int id = Integer.parseInt(sc.nextLine());
+            int id = scanInteger("ID del usuario a modificar");
 
-            System.out.print("Dinero: ");
-            int dinero = Integer.parseInt(sc.nextLine());
+            int edad = scanInteger("Edad");
 
             // Asignar valores a los parámetros
-            pstmt.setInt(1, dinero);
+            pstmt.setInt(1, edad);
             pstmt.setInt(2, id);
 
             int filasAfectadas = pstmt.executeUpdate(); // Ejecutar la actualización
+            System.out.println("Filas modificadas: " +filasAfectadas);
         } catch(Exception e) {
             System.out.println("Error de base de datos: " +e.getMessage());
         }
@@ -145,12 +161,11 @@ public class PruebaMySQL {
     public static void delete() {
         try {
             // Eliminar un registro
-            String sql = "DELETE FROM pruebas WHERE id = ?"; // Consulta SQL con parámetros
+            String sql = "DELETE FROM alumnos WHERE id = ?"; // Consulta SQL con parámetros
             PreparedStatement pstmt = conn.prepareStatement(sql); // Preparar la sentencia
 
             // Pedir información
-            System.out.print("ID del usuario a eliminar: ");
-            int id = Integer.parseInt(sc.nextLine());
+            int id = scanInteger("ID del usuario a eliminar");    
 
             // Asignar valor al parámetro
             pstmt.setInt(1, id); // Eliminar el registro con ID a elegir

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PruebaEscuela",
+            "request": "launch",
+            "mainClass": "JDBC.ProyectoAlumnos.PruebaEscuela",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "PruebaMySQL",
+            "request": "launch",
+            "mainClass": "JDBC.PruebaMySQL",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

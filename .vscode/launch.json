@@ -6,6 +6,97 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EjercicioArchivos5",
+            "request": "launch",
+            "mainClass": "EjerciciosArchivos.EjercicioArchivos5",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioArchivos4",
+            "request": "launch",
+            "mainClass": "EjerciciosArchivos.EjercicioArchivos4",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioArchivos1",
+            "request": "launch",
+            "mainClass": "EjerciciosArchivos.EjercicioArchivos1",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "ListarArchivos",
+            "request": "launch",
+            "mainClass": "Archivos.ListarArchivos",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "CrearDirectorio",
+            "request": "launch",
+            "mainClass": "Archivos.CrearDirectorio",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EscribirConNIO",
+            "request": "launch",
+            "mainClass": "Archivos.EscribirConNIO",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "LeerConNIO",
+            "request": "launch",
+            "mainClass": "Archivos.LeerConNIO",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EscribirConPrintWriter",
+            "request": "launch",
+            "mainClass": "Archivos.EscribirConPrintWriter",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "EscribirArchivo",
+            "request": "launch",
+            "mainClass": "Archivos.EscribirArchivo",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "LeerArchivo",
+            "request": "launch",
+            "mainClass": "Archivos.LeerArchivo",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "LeerArchivoConScanner",
+            "request": "launch",
+            "mainClass": "Archivos.LeerArchivoConScanner",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "pruebas.Test",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
+            "name": "ScriptFeo",
+            "request": "launch",
+            "mainClass": "pruebas.ScriptFeo",
+            "projectName": "ContenidosCurso_92527b1e"
+        },
+        {
+            "type": "java",
             "name": "PruebaEscuela",
             "request": "launch",
             "mainClass": "JDBC.ProyectoAlumnos.PruebaEscuela",
